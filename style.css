@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background: #fff;
+}
+
+.wrapper .header {
+  z-index: 1;
+  background: #c5068f;
+  position: fixed;
+  width: calc(100% - 0%);
+  height: 70px;
+  display: flex;
+  top: 0;
+}
+
+.wrapper .header .header-menu {
+  width: calc(100% - 0%);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.wrapper .header .header-menu .title {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.wrapper .header .header-menu .title span {
+  color: #10040d;
+}
+
+.wrapper .header .header-menu .sidebar-btn {
+  color: #fff;
+  position: absolute;
+  font-size: 22px;
+  margin-left: 240px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: color;
+}
+.wrapper .header .header-menu .sidebar-btn:hover {
+  color: #10040d;
+}
+
+.wrapper .header .header-menu ul {
+  display: flex;
+}
+
+.wrapper .header .header-menu ul li a {
+  background: #fff;
+  color: #000;
+  display: block;
+  margin: 0 10px;
+  font-size: 18px;
+  width: 34px;
+  height: 34px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  transition-property: background, color;
+}
+
+.wrapper .header .header-menu ul li a:hover {
+  background: #fa57cc;
+  color: #fff;
+}
+
+.wrapper .sidebar {
+  z-index: 1;
+  background: #60194c;
+  position: fixed;
+  top: 70px;
+  width: 250px;
+  height: calc(100% - 0%);
+  transition: 0.3s;
+  transition-property: width;
+  overflow-y: auto;
+}
+
+.wrapper .sidebar .sidebar-menu {
+  overflow: hidden;
+  color: #fff;
+}
+
+.wrapper .sidebar .sidebar-menu .profile img {
+  margin-top: 10px;
+  margin: 20px, 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.wrapper .sidebar .sidebar-menu .profile p {
+  color: #bbb;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item {
+  width: 250px;
+  overflow: hidden;
+  font-size: 20px;
+  margin: 50px 0;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn{
+  display: block;
+  color: #fff;
+  position: relative;
+  transition: 0.3s;
+  transition-property: color;
+}
+.wrapper .sidebar .sidebar-menu .item .menu-btn i{
+  padding-right: 20px;
+  font-size: 23px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+  color: #FD7BDE ;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+  float: right;
+  font-size: 12px;
+  margin-top: 3px;
+
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu{
+  background: #DB15F0;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.3s;
+  transition-property: background, max-height;
+
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a{
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  border-bottom: 1px solid black;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+  background: #B40DC6 ;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu i{
+  padding-right: 20px;
+  font-size: 18px;
+}
+
+.wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+    max-height: 500px ;
+}
+
+.wrapper .main-container{
+  width: calc(100% - 250px);
+  margin-top: 70px;
+  margin-left: 250px;
+  padding: 15px;
+  background: url(image/backgroud.jpg)no-repeat;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.3s;
+
+}
+
+.wrapper.collapsed .sidebar{
+  width:70px;
+
+}
+
+.wrapper.collapsed .sidebar .profile img,
+.wrapper.collapsed .sidebar .profile p,
+.wrapper.collapsed .sidebar a span{
+  display: none;
+}
+
+.wrapper.collapsed .sidebar .sidebar .sidebar-menu .item .menu-btn{
+  font-size: 23px;
+}
+
+.wrapper.collapsed .sidebar .sidebar .sidebar-menu .item .sub-menu i{
+  font-size: 18px;
+  padding-left: 3px;
+}
+
+.wrapper.collapsed .main-container{
+    width: (100%-70px);
+    margin-left: 70px;
+    
+}
